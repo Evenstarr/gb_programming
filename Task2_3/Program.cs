@@ -12,7 +12,7 @@ int IntInput(string message) {
 
 int a = IntInput("Введите число от 1 до 7: ");
 
-if (a > 7 || a < 0) {
+if (a > 7 || a < 1) {
     Console.WriteLine("Нужно было число от 1 до 7!");
     return;
 }
