@@ -17,7 +17,7 @@ int a = IntInput("Введите целое положительное числ�
 int b = 1;
 
 while (b <= a) {
-    Console.Write($"{Math.Pow(b, 2)} ");
+    Console.Write($"{Math.Pow(b, 3)} ");
     b++;
 }
 
