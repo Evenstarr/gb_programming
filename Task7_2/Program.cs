@@ -35,17 +35,9 @@ void Print2DArrayInt(int[,] arr) {
 }
 
 void CheckNumber(int[, ] arr, int pos) {
-    int firstPos = 0;
-    int secondPos = 0;
-    if (pos < 10) {
-        secondPos = pos;
-    } else if (pos >= 10 && pos < 20) {
-        firstPos = pos / 10;
-        secondPos = pos % 10;
-    } else {
-        Console.WriteLine("Невозможно определить позицию");
-        return;
-    }
+    int firstPos = pos / 10;
+    int secondPos = pos % 10;
+    
     if (firstPos < arr.GetLength(0) && secondPos < arr.GetLength(1)) {
         Console.WriteLine($"Значение элемента - {arr[firstPos, secondPos]}");
     } else {
@@ -53,8 +45,8 @@ void CheckNumber(int[, ] arr, int pos) {
     }
 }
 
-int m = new Random().Next(1, 10);
-int n = new Random().Next(1, 10);
+int m = 8;
+int n = 9;
 
 int[, ] arr = RandomIntArray(m, n);
 Print2DArrayInt(arr);
